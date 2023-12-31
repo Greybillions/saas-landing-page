@@ -420,7 +420,7 @@ img {
   right: 0;
   top: 5rem;
   width: 250px;
-  height: 50%;
+  height: 100%;
   z-index: 100;
   background: #fff;
   transition: right 0.3s ease-in-out;
@@ -442,6 +442,91 @@ img {
 .mobile-menu ul li a {
   font-size: 20px;
   transition: 0.3s;
+}
+
+/* Login Page */
+#login {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  background: #333;
+  color: var(--light-color);
+}
+
+#login .wrapper {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+#login .wrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#login .wrapper a {
+  color: lightblue;
+}
+
+#login .btn {
+  width: 100%;
+  font-size: 15px;
+}
+
+#login .btn:active {
+  transform: scale(0.98);
+}
+
+#login .form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+#login .form-control input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--light-color);
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: var(--light-color);
+  z-index: 20;
+  position: relative;
+}
+
+#login .form-control input:focus,
+#login .form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+#login .text {
+  margin-top: 30px;
+}
+
+#login .form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  z-index: 19;
+}
+
+#login .form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#login .form-control input:focus + label span,
+#login .form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
 }
 
 /* Media Queries */
@@ -498,4 +583,7 @@ img {
 }
 
 @media (max-width: 500px) {
+  #login {
+    height: 70vh;
+  }
 }
